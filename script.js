@@ -1,4 +1,4 @@
-let arrayOfDrums=document.getElementsByClassName("drum");
+/*let arrayOfDrums=document.getElementsByClassName("drum");
 // console.log(arrayOfDrums);
 
 for(let i=0;i<arrayOfDrums.length;i++){
@@ -76,7 +76,7 @@ const makeSound=(key)=>{
 
     }
 } 
-
+*/
 
 
 
@@ -88,10 +88,11 @@ const makeSound=(key)=>{
 
 //Easy way:--using parent:
 
-/*const drumsParent = document.getElementById("drumsParent");
+const drumsParent = document.getElementById("set");
 
 drumsParent.addEventListener("click", (e) => {
   let target = e.target.innerHTML;
+  console.log(target);
   createSound(target); // for creating sound
   buttonAnimation(target); // for animating drums
 });
@@ -99,7 +100,7 @@ drumsParent.addEventListener("click", (e) => {
 drumsParent.addEventListener("keydown", (e) => {
   let target = e.key;
   let array = ["w", "a", "d", "j", "k", "l", "s"]; //if key pressed is apart from this array then alert will be shown
-  if (!array.includes(target)) {
+  if (array.includes(target)===false) {
     alert("Wrong Key Press");
     return;
   }
@@ -108,7 +109,7 @@ drumsParent.addEventListener("keydown", (e) => {
 });
 
 const createSound = (key) => {
-  let sound = new Audio(`sounds/${key}.mp3`); //dynamically updating the sound
+  let sound = new Audio(`assets/sounds/${key}.mp3`); //dynamically updating the sound
   sound.play();
 };
 
@@ -120,4 +121,4 @@ const buttonAnimation = (key) => {
     active.classList.remove("pressed");
   }, 100);
 };
-*/
+
